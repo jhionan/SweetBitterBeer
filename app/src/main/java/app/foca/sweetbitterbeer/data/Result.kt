@@ -1,6 +1,6 @@
 package app.foca.sweetbitterbeer.data
 
-data class Result<out T>(val status: Status, val data: T?, val message: String?) {
+sealed class Result<out T> {
 
     enum class Status {
         SUCCESS,
@@ -8,17 +8,9 @@ data class Result<out T>(val status: Status, val data: T?, val message: String?)
         LOADING
     }
 
-    companion object {
-        fun <T> success(data: T): Result<T> {
-            return Result(Status.SUCCESS, data, null)
-        }
+    class loading<T> : Result<T>()
+    data class error<T>(val message: String) : Result<T>()
+    data class success<T>(val data: T) : Result<T>()
 
-        fun <T> error(message: String, data: T? = null): Result<T> {
-            return Result(Status.ERROR, data, message)
-        }
 
-        fun <T> loading(data: T? = null): Result<T> {
-            return Result(Status.LOADING, data, null)
-        }
-    }
 }

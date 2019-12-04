@@ -1,13 +1,16 @@
 package app.foca.sweetbitterbeer.data
 
 import android.content.Context
+import android.os.Parcel
+import android.os.Parcelable
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverters
 import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.WorkManager
-import app.foca.sweetbitterbeer.model.Beer
+import app.foca.sweetbitterbeer.model.*
 import app.foca.sweetbitterbeer.worker.SeedDatabaseWorker
 
 
@@ -18,7 +21,8 @@ import app.foca.sweetbitterbeer.worker.SeedDatabaseWorker
     entities = [Beer::class],
     version = 1, exportSchema = false
 )
-abstract class AppDatabase : RoomDatabase() {
+@TypeConverters(TypeConverter::class)
+abstract class AppDatabase() : RoomDatabase() {
 
     abstract fun beerDao(): BeerDao
 

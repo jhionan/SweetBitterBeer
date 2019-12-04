@@ -43,6 +43,13 @@ class AppModule {
     fun provideCoroutineScopeIO() = CoroutineScope(Dispatchers.IO)
 
 
+    @BeerAPI
+    @Provides
+    fun providePrivateOkHttpClient(
+        upstreamClient: OkHttpClient
+    ): OkHttpClient {
+        return upstreamClient.newBuilder().build()
+    }
     private fun createRetrofit(
         okhttpClient: OkHttpClient,
         converterFactory: GsonConverterFactory
