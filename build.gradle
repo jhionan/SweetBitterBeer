@@ -10,7 +10,8 @@ buildscript {
         okhttp_version = '3.10.0'
         stetho_version = '1.5.1'
         room_version = '2.2.2'
-        work_version = '2.1.0'
+        work_version = '2.2.0'
+        material_version = '1.0.0'
     }
 
     repositories {

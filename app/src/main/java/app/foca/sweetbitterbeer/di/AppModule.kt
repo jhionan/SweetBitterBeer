@@ -4,7 +4,9 @@ package app.foca.sweetbitterbeer.di
 import android.app.Application
 import app.foca.sweetbitterbeer.api.BeerApi
 import app.foca.sweetbitterbeer.data.AppDatabase
+import app.foca.sweetbitterbeer.data.BeerDao
 import app.foca.sweetbitterbeer.data.BeerRemoteDataSource
+import app.foca.sweetbitterbeer.data.BeerRepository
 import dagger.Module
 import dagger.Provides
 import kotlinx.coroutines.CoroutineScope
@@ -50,6 +52,7 @@ class AppModule {
     ): OkHttpClient {
         return upstreamClient.newBuilder().build()
     }
+
     private fun createRetrofit(
         okhttpClient: OkHttpClient,
         converterFactory: GsonConverterFactory

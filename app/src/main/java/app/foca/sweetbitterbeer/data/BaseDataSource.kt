@@ -24,7 +24,7 @@ abstract class BaseDataSource {
     }
 
     companion object {
-        val TAG = BaseDataSource::class.simpleName
+        val TAG = BaseDataSource::class.java.simpleName
     }
 
 }
