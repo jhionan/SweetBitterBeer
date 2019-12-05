@@ -20,7 +20,7 @@ abstract class BaseDataSource {
 
     private fun <T> error(message: String): Result<T> {
         Log.e(TAG, message)
-        return Result.error("Network call has failed for a following reason: $message")
+        return Result.error("Not good news!: $message")
     }
 
     companion object {

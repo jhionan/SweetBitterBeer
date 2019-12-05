@@ -13,5 +13,6 @@ interface BeerApi {
 
 
     @GET("beers")
-    suspend fun beers(@Query("page") page: Int? = null): Response<List<Beer>>
+    suspend fun beers(@Query("page") page: Int? = null,
+                      @Query("per_page") pageSize: Int? = 50): Response<List<Beer>>
 }

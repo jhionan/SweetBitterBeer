@@ -4,7 +4,7 @@ package app.foca.sweetbitterbeer.di
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import app.foca.sweetbitterbeer.features.detail.DetailsViewModel
-import app.foca.sweetbitterbeer.features.menu.MenuViewModel
+import app.foca.sweetbitterbeer.features.menu.viewModel.MenuViewModel
 import app.foca.sweetbitterbeer.utils.viewModel.ViewModelFactory
 
 import dagger.Binds

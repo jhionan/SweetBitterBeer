@@ -48,8 +48,8 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:$okhttp_version"
     // Dagger 2
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0'
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
     kapt "com.google.dagger:dagger-compiler:$dagger2_version"
     kapt "com.google.dagger:dagger-android-processor:$dagger2_version"
     implementation "com.google.dagger:dagger:$dagger2_version"
@@ -58,6 +58,7 @@ dependencies {
     //tools
     implementation "com.facebook.stetho:stetho:$stetho_version"
     implementation "com.facebook.stetho:stetho-okhttp3:$stetho_version"
+    implementation "com.jakewharton.timber:timber:$timber_version"
 
     //room
     implementation "androidx.room:room-runtime:$room_version"
@@ -67,8 +68,9 @@ dependencies {
     implementation "androidx.work:work-runtime-ktx:$work_version"
 
     implementation "com.google.android.material:material:$material_version"
-    implementation 'androidx.navigation:navigation-fragment-ktx:2.1.0'
-    implementation 'androidx.navigation:navigation-ui-ktx:2.1.0'
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+    implementation "androidx.paging:paging-runtime:$paging_version"
 
 
     implementation 'androidx.appcompat:appcompat:1.1.0'

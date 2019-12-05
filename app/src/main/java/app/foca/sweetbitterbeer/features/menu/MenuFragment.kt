@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import app.foca.sweetbitterbeer.R
 import app.foca.sweetbitterbeer.databinding.FragmentMenuBinding
 import app.foca.sweetbitterbeer.di.Injectable
+import app.foca.sweetbitterbeer.features.menu.viewModel.MenuViewModel
 import app.foca.sweetbitterbeer.utils.viewModel.injectViewModel
 import javax.inject.Inject
 
